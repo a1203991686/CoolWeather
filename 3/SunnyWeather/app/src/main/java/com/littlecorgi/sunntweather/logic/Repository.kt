@@ -1,6 +1,8 @@
 package com.littlecorgi.sunntweather.logic
 
 import androidx.lifecycle.liveData
+import com.littlecorgi.sunntweather.logic.dao.PlaceDao
+import com.littlecorgi.sunntweather.logic.model.Place
 import com.littlecorgi.sunntweather.logic.model.Weather
 import com.littlecorgi.sunntweather.logic.network.SunnyWeatherNetwork
 import kotlinx.coroutines.Dispatchers
@@ -46,8 +48,8 @@ object Repository {
         }
     }
 
-
-    private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) = liveData(context) {
+    private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) =
+        liveData(context) {
             val result = try {
                 block()
             } catch (e: Exception) {
@@ -55,4 +57,10 @@ object Repository {
             }
             emit(result)
         }
+
+    fun savePlace(place: Place) = PlaceDao.savePlace(place)
+
+    fun getSavedPlace() = PlaceDao.getSavedPlace()
+
+    fun isSavedPlace() = PlaceDao.isPlaceSaved()
 }
