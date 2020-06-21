@@ -2,6 +2,7 @@ package com.littlecorgi.sunntweather.ui.weather
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
@@ -54,6 +55,7 @@ class WeatherActivity : AppCompatActivity() {
 
     private fun showWeatherInfo(weather: Weather) {
         placeName.text = viewModel.placeName
+        Log.d("WeatherActivity", "showWeatherInfo: ${viewModel.placeName}")
         val realtime = weather.realtime
         val daily = weather.daily
         // 填充now.xml布局中数据
