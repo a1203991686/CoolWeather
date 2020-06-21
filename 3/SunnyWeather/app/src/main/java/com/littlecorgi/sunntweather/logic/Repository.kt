@@ -1,6 +1,8 @@
 package com.littlecorgi.sunntweather.logic
 
+import android.util.Log
 import androidx.lifecycle.liveData
+import com.littlecorgi.sunntweather.SunnyWeatherApplication
 import com.littlecorgi.sunntweather.logic.dao.PlaceDao
 import com.littlecorgi.sunntweather.logic.model.Place
 import com.littlecorgi.sunntweather.logic.model.Weather
@@ -31,6 +33,14 @@ object Repository {
             val deferredDaily = async {
                 SunnyWeatherNetwork.getDailyWeather(lng, lat)
             }
+            Log.d(
+                "SunnyWeather",
+                "https://api.caiyunapp.com/v2.5/${SunnyWeatherApplication.TOKEN}/${lng},${lat}/realtime.json"
+            )
+            Log.d(
+                "SunnyWeather",
+                "https://api.caiyunapp.com/v2.5/${SunnyWeatherApplication.TOKEN}/${lng},${lat}/daily.json"
+            )
             val realtimeResponse = deferredRealtime.await()
             val dailyResponse = deferredDaily.await()
             if (realtimeResponse.status == "ok" && dailyResponse.status == "ok") {

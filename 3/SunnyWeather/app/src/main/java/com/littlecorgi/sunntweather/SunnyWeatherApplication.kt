@@ -7,7 +7,7 @@ class SunnyWeatherApplication : Application() {
 
     companion object {
 
-        const val TOKEN = "TbStBMEC2EHzbntf"
+        const val TOKEN = "F6FpeVaXQXs9T3A9"
 
         lateinit var context: Context
     }
