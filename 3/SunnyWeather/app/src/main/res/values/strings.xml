@@ -2,4 +2,16 @@
     <string name="app_name">SunnyWeather</string>
     <string name="input_address">输入地址</string>
     <string name="background">背景</string>
+    <string name="pipe">|</string>
+    <string name="forecast">预报</string>
+    <string name="sky_icon">天气图标</string>
+    <string name="life_index">生活指数</string>
+    <string name="cold_icon">感冒图标</string>
+    <string name="cold">感冒</string>
+    <string name="dressing_icon">穿衣图标</string>
+    <string name="dressing">穿衣</string>
+    <string name="ultraviolet_icon">紫外线图标</string>
+    <string name="ultraviolet">实时紫外线</string>
+    <string name="car_washing_icon">洗车图标</string>
+    <string name="car_washing">洗车</string>
 </resources>
