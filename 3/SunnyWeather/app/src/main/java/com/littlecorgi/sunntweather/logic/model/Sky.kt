@@ -2,6 +2,9 @@ package com.littlecorgi.sunntweather.logic.model
 
 import com.littlecorgi.sunntweather.R
 
+/**
+ * key的内容和图片转换类
+ */
 class Sky(val info: String, val icon: Int, val bg: Int)
 
 private val sky = mapOf(

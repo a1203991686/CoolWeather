@@ -12,6 +12,7 @@ class PlaceViewModel : ViewModel() {
 
     val placeList = ArrayList<Place>()
 
+    // 通过switchMap将返回来的LiveData转换成placeLiveData这个LiveData对象
     val placeLiveData = Transformations.switchMap(searchLiveData) { query ->
         Repository.searchPlaces(query)
     }

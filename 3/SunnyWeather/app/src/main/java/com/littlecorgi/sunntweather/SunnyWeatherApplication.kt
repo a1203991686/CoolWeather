@@ -7,8 +7,10 @@ class SunnyWeatherApplication : Application() {
 
     companion object {
 
-        const val TOKEN = "F6FpeVaXQXs9T3A9"
+        // 请换成你申请的彩云天气的Token
+        const val TOKEN = ""
 
+        // 全局获取的Context
         lateinit var context: Context
     }
 

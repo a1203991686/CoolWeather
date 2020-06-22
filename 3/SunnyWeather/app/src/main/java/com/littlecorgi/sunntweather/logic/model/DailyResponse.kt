@@ -3,6 +3,11 @@ package com.littlecorgi.sunntweather.logic.model
 import com.google.gson.annotations.SerializedName
 import java.util.*
 
+/**
+ * 天级预报接口实体类
+ * https://open.caiyunapp.com/%E5%A4%A9%E7%BA%A7%E9%A2%84%E6%8A%A5%E6%8E%A5%E5%8F%A3/v2.5
+ * @author littlecorgi
+ */
 data class DailyResponse(val status: String, val result: Result) {
 
     data class Result(val daily: Daily)
