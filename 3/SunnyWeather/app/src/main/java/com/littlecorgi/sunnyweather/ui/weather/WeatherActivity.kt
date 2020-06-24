@@ -1,6 +1,7 @@
-package com.littlecorgi.sunntweather.ui.weather
+package com.littlecorgi.sunnyweather.ui.weather
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -15,9 +16,10 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.littlecorgi.sunntweather.R
-import com.littlecorgi.sunntweather.logic.model.Weather
-import com.littlecorgi.sunntweather.logic.model.getSky
+import com.littlecorgi.sunnyweather.MainActivity
+import com.littlecorgi.sunnyweather.R
+import com.littlecorgi.sunnyweather.logic.model.Weather
+import com.littlecorgi.sunnyweather.logic.model.getSky
 import kotlinx.android.synthetic.main.activity_weather.*
 import kotlinx.android.synthetic.main.forecast.*
 import kotlinx.android.synthetic.main.life_index.*
@@ -81,6 +83,33 @@ class WeatherActivity : AppCompatActivity() {
             }
 
             override fun onDrawerOpened(drawerView: View) {}
+        })
+
+        placeName.setOnClickListener {
+            viewModel.clickToolbarText()
+        }
+
+        viewModel.toolbarTextClickEvent.observe(this, Observer {
+            com.littlecorgi.sunnyweather.startActivity<MainActivity>(this) {
+                this.putExtra("from_activity", "WeatherActivity")
+            }
+        })
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        viewModel.locationLat = intent?.getStringExtra("location_lat") ?: ""
+        viewModel.locationLng = intent?.getStringExtra("location_lng") ?: ""
+        viewModel.placeName = intent?.getStringExtra("place_name") ?: ""
+        viewModel.weatherLiveData.observe(this, Observer { result ->
+            val weather = result.getOrNull()
+            if (weather != null) {
+                showWeatherInfo(weather)
+            } else {
+                Toast.makeText(this, "无法成功获取天气信息", Toast.LENGTH_SHORT).show()
+                result.exceptionOrNull()?.printStackTrace()
+            }
+            swipeRefresh.isRefreshing = false
         })
     }
 

@@ -1,8 +1,8 @@
-package com.littlecorgi.sunntweather.logic.network
+package com.littlecorgi.sunnyweather.logic.network
 
-import com.littlecorgi.sunntweather.SunnyWeatherApplication
-import com.littlecorgi.sunntweather.logic.model.DailyResponse
-import com.littlecorgi.sunntweather.logic.model.RealtimeResponse
+import com.littlecorgi.sunnyweather.SunnyWeatherApplication
+import com.littlecorgi.sunnyweather.logic.model.DailyResponse
+import com.littlecorgi.sunnyweather.logic.model.RealtimeResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

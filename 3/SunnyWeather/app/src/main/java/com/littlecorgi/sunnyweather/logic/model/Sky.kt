@@ -1,6 +1,6 @@
-package com.littlecorgi.sunntweather.logic.model
+package com.littlecorgi.sunnyweather.logic.model
 
-import com.littlecorgi.sunntweather.R
+import com.littlecorgi.sunnyweather.R
 
 /**
  * key的内容和图片转换类

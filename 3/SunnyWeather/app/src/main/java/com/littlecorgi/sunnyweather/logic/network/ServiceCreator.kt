@@ -1,4 +1,4 @@
-package com.littlecorgi.sunntweather.logic.network
+package com.littlecorgi.sunnyweather.logic.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -1,12 +1,12 @@
-package com.littlecorgi.sunntweather.logic
+package com.littlecorgi.sunnyweather.logic
 
 import android.util.Log
 import androidx.lifecycle.liveData
-import com.littlecorgi.sunntweather.SunnyWeatherApplication
-import com.littlecorgi.sunntweather.logic.dao.PlaceDao
-import com.littlecorgi.sunntweather.logic.model.Place
-import com.littlecorgi.sunntweather.logic.model.Weather
-import com.littlecorgi.sunntweather.logic.network.SunnyWeatherNetwork
+import com.littlecorgi.sunnyweather.SunnyWeatherApplication
+import com.littlecorgi.sunnyweather.logic.dao.PlaceDao
+import com.littlecorgi.sunnyweather.logic.model.Place
+import com.littlecorgi.sunnyweather.logic.model.Weather
+import com.littlecorgi.sunnyweather.logic.network.SunnyWeatherNetwork
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope

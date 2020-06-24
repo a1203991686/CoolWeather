@@ -1,4 +1,4 @@
-package com.littlecorgi.sunntweather
+package com.littlecorgi.sunnyweather
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

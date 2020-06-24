@@ -1,4 +1,4 @@
-package com.littlecorgi.sunntweather.ui.place
+package com.littlecorgi.sunnyweather.ui.place
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.littlecorgi.sunntweather.R
-import com.littlecorgi.sunntweather.logic.model.Place
-import com.littlecorgi.sunntweather.ui.weather.WeatherActivity
+import com.littlecorgi.sunnyweather.R
+import com.littlecorgi.sunnyweather.logic.model.Place
+import com.littlecorgi.sunnyweather.ui.weather.WeatherActivity
 import kotlinx.android.synthetic.main.activity_weather.*
 
 class PlaceAdapter(private val fragment: PlaceFragment, private val placeList: List<Place>) :

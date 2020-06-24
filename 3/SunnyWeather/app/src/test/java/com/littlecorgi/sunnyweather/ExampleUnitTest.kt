@@ -1,4 +1,4 @@
-package com.littlecorgi.sunntweather
+package com.littlecorgi.sunnyweather
 
 import org.junit.Test
 

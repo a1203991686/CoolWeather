@@ -1,4 +1,4 @@
-package com.littlecorgi.sunntweather.logic.model
+package com.littlecorgi.sunnyweather.logic.model
 
 import com.google.gson.annotations.SerializedName
 

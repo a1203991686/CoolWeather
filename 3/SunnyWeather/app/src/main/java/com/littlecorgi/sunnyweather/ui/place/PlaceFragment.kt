@@ -1,4 +1,4 @@
-package com.littlecorgi.sunntweather.ui.place
+package com.littlecorgi.sunnyweather.ui.place
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,9 +12,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.MergeAdapter
-import com.littlecorgi.sunntweather.MainActivity
-import com.littlecorgi.sunntweather.R
-import com.littlecorgi.sunntweather.ui.weather.WeatherActivity
+import com.littlecorgi.sunnyweather.MainActivity
+import com.littlecorgi.sunnyweather.R
+import com.littlecorgi.sunnyweather.ui.weather.WeatherActivity
 import kotlinx.android.synthetic.main.fragment_place.*
 
 class PlaceFragment : Fragment() {
@@ -35,15 +35,17 @@ class PlaceFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         if (activity is MainActivity && viewModel.isPlaceSaved()) {
-            val place = viewModel.getSavedPlace()
-            val intent = Intent(context, WeatherActivity::class.java).apply {
-                putExtra("location_lng", place.location.lng)
-                putExtra("location_lat", place.location.lat)
-                putExtra("place_name", place.name)
+            if ((activity as MainActivity).intent.getStringExtra("from_activity") != "WeatherActivity") {
+                val place = viewModel.getSavedPlace()
+                val intent = Intent(context, WeatherActivity::class.java).apply {
+                    putExtra("location_lng", place.location.lng)
+                    putExtra("location_lat", place.location.lat)
+                    putExtra("place_name", place.name)
+                }
+                startActivity(intent)
+                activity?.finish()
+                return
             }
-            startActivity(intent)
-            activity?.finish()
-            return
         }
         val layoutManager = LinearLayoutManager(activity)
         recyclerView.layoutManager = layoutManager

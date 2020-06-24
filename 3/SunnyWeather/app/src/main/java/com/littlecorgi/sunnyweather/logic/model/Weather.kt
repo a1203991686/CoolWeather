@@ -1,4 +1,4 @@
-package com.littlecorgi.sunntweather.logic.model
+package com.littlecorgi.sunnyweather.logic.model
 
 /**
  * 为了方便，将实时天气和天级预报聚合成一个类

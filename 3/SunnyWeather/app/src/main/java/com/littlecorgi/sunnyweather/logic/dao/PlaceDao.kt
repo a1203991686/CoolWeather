@@ -1,10 +1,10 @@
-package com.littlecorgi.sunntweather.logic.dao
+package com.littlecorgi.sunnyweather.logic.dao
 
 import android.content.Context
 import androidx.core.content.edit
 import com.google.gson.Gson
-import com.littlecorgi.sunntweather.SunnyWeatherApplication
-import com.littlecorgi.sunntweather.logic.model.Place
+import com.littlecorgi.sunnyweather.SunnyWeatherApplication
+import com.littlecorgi.sunnyweather.logic.model.Place
 
 /**
  * Place数据操作的Dao

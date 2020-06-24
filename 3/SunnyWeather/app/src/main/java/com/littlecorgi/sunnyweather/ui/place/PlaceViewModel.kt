@@ -1,10 +1,10 @@
-package com.littlecorgi.sunntweather.ui.place
+package com.littlecorgi.sunnyweather.ui.place
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.littlecorgi.sunntweather.logic.Repository
-import com.littlecorgi.sunntweather.logic.model.Place
+import com.littlecorgi.sunnyweather.logic.Repository
+import com.littlecorgi.sunnyweather.logic.model.Place
 
 class PlaceViewModel : ViewModel() {
 
