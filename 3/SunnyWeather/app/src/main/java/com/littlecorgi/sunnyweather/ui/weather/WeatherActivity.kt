@@ -20,6 +20,7 @@ import com.littlecorgi.sunnyweather.MainActivity
 import com.littlecorgi.sunnyweather.R
 import com.littlecorgi.sunnyweather.logic.model.Weather
 import com.littlecorgi.sunnyweather.logic.model.getSky
+import com.littlecorgi.sunnyweather.ui.mid.MidActivity
 import kotlinx.android.synthetic.main.activity_weather.*
 import kotlinx.android.synthetic.main.forecast.*
 import kotlinx.android.synthetic.main.life_index.*
@@ -94,6 +95,12 @@ class WeatherActivity : AppCompatActivity() {
                 this.putExtra("from_activity", "WeatherActivity")
             }
         })
+
+        navToMidBtn.setOnClickListener {
+            com.littlecorgi.sunnyweather.startActivity<MidActivity>(this) {
+                null
+            }
+        }
     }
 
     override fun onNewIntent(intent: Intent?) {

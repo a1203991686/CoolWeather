@@ -5,17 +5,18 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.littlecorgi.sunnyweather.SunnyWeatherApplication"
+        android:name=".SunnyWeatherApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.mid.MidActivity"></activity>
         <activity
-            android:name="com.littlecorgi.sunnyweather.ui.weather.WeatherActivity"
+            android:name=".ui.weather.WeatherActivity"
             android:launchMode="singleTask" />
-        <activity android:name="com.littlecorgi.sunnyweather.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
