@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_mid"
+    app:startDestination="@id/liveDataFragment">
+
+    <fragment
+        android:id="@+id/liveDataFragment"
+        android:name="com.littlecorgi.sunntweather.LiveDataFragment"
+        android:label="fragment_live_data"
+        tools:layout="@layout/fragment_live_data" />
+</navigation>
