@@ -3,11 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_mid"
-    app:startDestination="@id/liveDataFragment">
+    app:startDestination="@id/changeLiveDataFragment">
 
     <fragment
         android:id="@+id/liveDataFragment"
-        android:name="com.littlecorgi.sunntweather.LiveDataFragment"
+        android:name="com.littlecorgi.sunnyweather.ui.livedata.LiveDataFragment"
         android:label="fragment_live_data"
         tools:layout="@layout/fragment_live_data" />
+    <fragment
+        android:id="@+id/changeLiveDataFragment"
+        android:name="com.littlecorgi.sunnyweather.ui.livedata.ChooseLiveDataFragment"
+        android:label="fragment_change_live_data"
+        tools:layout="@layout/fragment_choose_live_data" >
+        <action
+            android:id="@+id/action_changeLiveDataFragment_to_liveDataFragment"
+            app:destination="@id/liveDataFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@android:anim/slide_in_left" />
+    </fragment>
 </navigation>

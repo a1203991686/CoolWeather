@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.mid.MidActivity"></activity>
+        <activity android:name=".ui.mid.MidActivity" />
         <activity
             android:name=".ui.weather.WeatherActivity"
             android:launchMode="singleTask" />
