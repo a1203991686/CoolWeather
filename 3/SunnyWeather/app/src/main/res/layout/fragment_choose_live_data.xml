@@ -18,6 +18,5 @@
                 android:text="@string/to_livedata_fragment" />
 
         </LinearLayout>
-
     </FrameLayout>
 </layout>

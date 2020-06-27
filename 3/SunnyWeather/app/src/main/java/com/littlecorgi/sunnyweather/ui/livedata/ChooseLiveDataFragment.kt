@@ -27,7 +27,7 @@ class ChooseLiveDataFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.toLiveDataFragmentBtn.setOnClickListener {
-            navController.navigate(R.id.action_changeLiveDataFragment_to_liveDataFragment)
+            navController.navigate(R.id.action_chooseLiveDataFragment_to_liveDataFragment)
         }
     }
 }

@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_mid"
-    app:startDestination="@id/changeLiveDataFragment">
+    app:startDestination="@id/chooseLiveDataFragment">
 
     <fragment
         android:id="@+id/liveDataFragment"
-        android:name="com.littlecorgi.sunnyweather.ui.livedata.LiveDataFragment"
+        android:name="com.littlecorgi.sunnyweather.ui.livedata.livedata.LiveDataFragment"
         android:label="fragment_live_data"
         tools:layout="@layout/fragment_live_data" />
     <fragment
-        android:id="@+id/changeLiveDataFragment"
+        android:id="@+id/chooseLiveDataFragment"
         android:name="com.littlecorgi.sunnyweather.ui.livedata.ChooseLiveDataFragment"
         android:label="fragment_change_live_data"
         tools:layout="@layout/fragment_choose_live_data">
         <action
-            android:id="@+id/action_changeLiveDataFragment_to_liveDataFragment"
+            android:id="@+id/action_chooseLiveDataFragment_to_liveDataFragment"
             app:destination="@id/liveDataFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
