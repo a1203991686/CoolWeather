@@ -14,13 +14,13 @@
         android:id="@+id/changeLiveDataFragment"
         android:name="com.littlecorgi.sunnyweather.ui.livedata.ChooseLiveDataFragment"
         android:label="fragment_change_live_data"
-        tools:layout="@layout/fragment_choose_live_data" >
+        tools:layout="@layout/fragment_choose_live_data">
         <action
             android:id="@+id/action_changeLiveDataFragment_to_liveDataFragment"
             app:destination="@id/liveDataFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_out_right"
-            app:popExitAnim="@android:anim/slide_in_left" />
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 </navigation>
