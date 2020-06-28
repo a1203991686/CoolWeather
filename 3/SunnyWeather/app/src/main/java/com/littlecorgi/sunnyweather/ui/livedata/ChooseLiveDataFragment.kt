@@ -13,8 +13,6 @@ class ChooseLiveDataFragment : Fragment() {
 
     private lateinit var binding: FragmentChooseLiveDataBinding
 
-    private val navController = NavHostFragment.findNavController(this)
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,8 +21,10 @@ class ChooseLiveDataFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        val navController = NavHostFragment.findNavController(this)
 
         binding.toLiveDataFragmentBtn.setOnClickListener {
             navController.navigate(R.id.action_chooseLiveDataFragment_to_liveDataFragment)

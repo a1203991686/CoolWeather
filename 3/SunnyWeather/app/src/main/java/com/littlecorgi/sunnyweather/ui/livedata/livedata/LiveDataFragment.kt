@@ -1,6 +1,5 @@
 package com.littlecorgi.sunnyweather.ui.livedata.livedata
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,8 +32,8 @@ class LiveDataFragment : Fragment(), CoroutineScope {
         return binding.root
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         binding.generateBtn.setOnClickListener {
             val a = (0..10000).random()
             launch {
