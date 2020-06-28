@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.littlecorgi.sunnyweather.R
 import com.littlecorgi.sunnyweather.databinding.FragmentLiveDataBinding
+import com.littlecorgi.sunnyweather.ui.livedata.LiveDataLiveFragment
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
@@ -15,7 +17,7 @@ class LiveDataFragment : Fragment(), CoroutineScope {
 
     private lateinit var binding: FragmentLiveDataBinding
 
-    private lateinit var viewModel: LiveDataViewModel
+    lateinit var viewModel: LiveDataViewModel
 
     private var job = Job()
 
@@ -34,6 +36,12 @@ class LiveDataFragment : Fragment(), CoroutineScope {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        val fragmentManager = activity?.supportFragmentManager
+        fragmentManager?.beginTransaction()
+            ?.add(R.id.fragment, LiveDataLiveFragment(this))
+            ?.commit()
+
         binding.generateBtn.setOnClickListener {
             val a = (0..10000).random()
             launch {

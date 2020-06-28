@@ -16,6 +16,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:text="@string/hello_blank_fragment"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -31,7 +32,6 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment"
-                android:name="com.littlecorgi.sunnyweather.ui.livedata.LiveDataLiveFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"

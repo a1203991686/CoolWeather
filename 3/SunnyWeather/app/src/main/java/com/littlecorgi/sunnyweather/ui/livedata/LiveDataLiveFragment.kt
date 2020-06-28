@@ -1,14 +1,15 @@
 package com.littlecorgi.sunnyweather.ui.livedata
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import com.littlecorgi.sunnyweather.databinding.FragmentLiveDataLiveBinding
+import com.littlecorgi.sunnyweather.ui.livedata.livedata.LiveDataFragment
 
-class LiveDataLiveFragment : Fragment() {
+class LiveDataLiveFragment(private val f: Fragment) : Fragment() {
 
     private lateinit var binding: FragmentLiveDataLiveBinding
 
@@ -21,11 +22,14 @@ class LiveDataLiveFragment : Fragment() {
         return binding.root
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-    }
-
-    internal fun setTextViewString(s: String) {
-
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        when (f) {
+            is LiveDataFragment -> {
+                f.viewModel.liveDataA.observe(viewLifecycleOwner, Observer {
+                    binding.textView.text = it
+                })
+            }
+        }
     }
 }
