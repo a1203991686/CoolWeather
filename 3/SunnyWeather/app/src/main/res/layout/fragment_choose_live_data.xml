@@ -15,7 +15,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/to_livedata_fragment" />
+                android:text="@string/to_livedatafragment" />
 
             <Button
                 android:id="@+id/toLiveDataMapFragmentBtn"
@@ -23,6 +23,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/to_livedatamapfragment" />
+
+            <Button
+                android:id="@+id/toLiveDataSwitchMapFragmentBtn"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_livedataswitchmapfragment" />
 
         </LinearLayout>
     </FrameLayout>

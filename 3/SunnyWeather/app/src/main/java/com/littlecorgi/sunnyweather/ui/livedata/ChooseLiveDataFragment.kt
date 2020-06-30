@@ -33,5 +33,9 @@ class ChooseLiveDataFragment : Fragment() {
         binding.toLiveDataMapFragmentBtn.setOnClickListener {
             navController.navigate(R.id.action_chooseLiveDataFragment_to_liveDataMapFragment)
         }
+
+        binding.toLiveDataSwitchMapFragmentBtn.setOnClickListener {
+            navController.navigate(R.id.action_chooseLiveDataFragment_to_liveDataSwitchMapFragment)
+        }
     }
 }

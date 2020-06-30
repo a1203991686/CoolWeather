@@ -7,9 +7,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.map
+import androidx.lifecycle.switchMap
 import com.littlecorgi.sunnyweather.databinding.FragmentLiveDataLiveBinding
 import com.littlecorgi.sunnyweather.ui.livedata.livedata.LiveDataFragment
 import com.littlecorgi.sunnyweather.ui.livedata.map.LiveDataMapFragment
+import com.littlecorgi.sunnyweather.ui.livedata.switchmap.LiveDataSwitchMapFragment
 
 class LiveDataLiveFragment(private val f: Fragment) : Fragment() {
 
@@ -35,6 +37,17 @@ class LiveDataLiveFragment(private val f: Fragment) : Fragment() {
             is LiveDataMapFragment -> {
                 f.viewModel.liveDataA.map { str ->
                     "A: $str"
+                }.observe(viewLifecycleOwner, Observer {
+                    binding.textView.text = it
+                })
+            }
+            is LiveDataSwitchMapFragment -> {
+                f.viewModel.switchLiveData.switchMap {
+                    if (it) {
+                        f.viewModel.liveDataA
+                    } else {
+                        f.viewModel.liveDataB
+                    }
                 }.observe(viewLifecycleOwner, Observer {
                     binding.textView.text = it
                 })

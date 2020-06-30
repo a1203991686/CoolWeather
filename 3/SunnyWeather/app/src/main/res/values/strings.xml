@@ -14,10 +14,10 @@
     <string name="ultraviolet">实时紫外线</string>
     <string name="car_washing_icon">洗车图标</string>
     <string name="car_washing">洗车</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="generate">Generate</string>
     <string name="remove_fragment">Remove Fragment</string>
-    <string name="to_livedata_fragment">To LiveData Fragment</string>
+    <string name="to_livedatafragment">To LiveDataFragment</string>
     <string name="to_livedatamapfragment">To LiveDataMapFragment</string>
+    <string name="to_livedataswitchmapfragment">To LiveDataSwitchMapFragment</string>
 </resources>

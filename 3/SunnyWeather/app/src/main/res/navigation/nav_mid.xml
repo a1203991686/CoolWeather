@@ -24,6 +24,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_chooseLiveDataFragment_to_liveDataSwitchMapFragment"
+            app:destination="@id/liveDataSwitchMapFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/liveDataFragment"
@@ -34,4 +41,8 @@
         android:id="@+id/liveDataMapFragment"
         android:name="com.littlecorgi.sunnyweather.ui.livedata.map.LiveDataMapFragment"
         android:label="LiveDataMapFragment" />
+    <fragment
+        android:id="@+id/liveDataSwitchMapFragment"
+        android:name="com.littlecorgi.sunnyweather.ui.livedata.switchmap.LiveDataSwitchMapFragment"
+        android:label="LiveDataSwitchMapFragment" />
 </navigation>
