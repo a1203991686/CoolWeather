@@ -19,4 +19,5 @@
     <string name="generate">Generate</string>
     <string name="remove_fragment">Remove Fragment</string>
     <string name="to_livedata_fragment">To LiveData Fragment</string>
+    <string name="to_livedatamapfragment">To LiveDataMapFragment</string>
 </resources>

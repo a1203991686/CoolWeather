@@ -29,5 +29,9 @@ class ChooseLiveDataFragment : Fragment() {
         binding.toLiveDataFragmentBtn.setOnClickListener {
             navController.navigate(R.id.action_chooseLiveDataFragment_to_liveDataFragment)
         }
+
+        binding.toLiveDataMapFragmentBtn.setOnClickListener {
+            navController.navigate(R.id.action_chooseLiveDataFragment_to_liveDataMapFragment)
+        }
     }
 }

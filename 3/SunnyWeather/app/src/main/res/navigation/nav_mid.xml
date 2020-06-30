@@ -17,10 +17,21 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_chooseLiveDataFragment_to_liveDataMapFragment"
+            app:destination="@id/liveDataMapFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/liveDataFragment"
         android:name="com.littlecorgi.sunnyweather.ui.livedata.livedata.LiveDataFragment"
         android:label="fragment_live_data"
         tools:layout="@layout/fragment_live_data" />
+    <fragment
+        android:id="@+id/liveDataMapFragment"
+        android:name="com.littlecorgi.sunnyweather.ui.livedata.map.LiveDataMapFragment"
+        android:label="LiveDataMapFragment" />
 </navigation>
